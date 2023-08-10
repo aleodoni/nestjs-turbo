@@ -18,12 +18,14 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
         with:
           fetch-depth: 2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
           node-version: ${{ matrix.node-version }}
+          cache: "yarn"
 
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
