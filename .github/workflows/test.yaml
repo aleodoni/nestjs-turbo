@@ -28,7 +28,7 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Build
-        run: yarn workspace gateway build
+        run: cd apps/gateway && yarn build
 
       - name: Test
-        run: yarn workspace gateway test
+        run: cd apps/gateway && yarn test
