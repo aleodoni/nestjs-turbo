@@ -27,9 +27,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Build with turbo
-        run: yarn turbo build
-
       - name: Test with turbo
         run: yarn turbo test
 
