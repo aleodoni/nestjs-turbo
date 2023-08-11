@@ -28,7 +28,7 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Build
-        run: cd apps/gateway && yarn build
+        run: cd packages/shared-libs && yarn build
 
       - name: Test
         run: cd apps/gateway && yarn test
