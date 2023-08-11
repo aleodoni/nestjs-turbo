@@ -27,10 +27,14 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Build
-        run: |
-          cd packages/shared-libs && yarn build
-          cd apps/gateway && yarn build
+      - name: Build shared-libs
+        working-directory: ./
+        run: cd packages/shared-libs && yarn build
 
-      - name: Test
+      - name: Build gateway
+        working-directory: ./
+        run: cd apps/gateway && yarn build
+
+      - name: Test gateway
+        working-directory: ./
         run: cd apps/gateway && yarn test
