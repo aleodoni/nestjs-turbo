@@ -27,9 +27,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Build shared-libs
-        working-directory: ./
-        run: cd packages/shared-libs && yarn build
+      # - name: Build shared-libs
+      #   working-directory: ./
+      #   run: cd packages/shared-libs && yarn build
 
       - name: Build gateway
         working-directory: ./
