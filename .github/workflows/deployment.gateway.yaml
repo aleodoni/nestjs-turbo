@@ -31,7 +31,7 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Test
-        run: yarn turbo test
+        run: yarn turbo test --filter=gateway...
 
   deploy-test:
     needs: test-ci
@@ -67,5 +67,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - run: docker build -t setup-nodejs .
+      - run: docker build -f apps/gateway/Dockerfile .
       - run: echo "Deploy Prod"
