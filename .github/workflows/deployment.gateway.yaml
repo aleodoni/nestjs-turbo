@@ -30,11 +30,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Build
-        run: yarn build
-
       - name: Test
-        run: yarn test
+        run: yarn turbo test
 
   deploy-test:
     needs: test-ci
