@@ -1,6 +1,6 @@
 {
   "name": "nestjs-turbo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "workspaces": [
     "packages/*",
@@ -21,5 +21,8 @@
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "gateway": "1.1.0"
+  }
 }
