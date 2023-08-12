@@ -46,7 +46,7 @@ jobs:
           fetch-depth: 2
 
       - name: Use Node.js 18.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
       - run: docker build -f apps/gateway/Dockerfile .
@@ -64,7 +64,7 @@ jobs:
         with:
           fetch-depth: 2
       - name: Use Node.js 18.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
       - run: docker build -t setup-nodejs .
