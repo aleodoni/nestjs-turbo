@@ -18,6 +18,11 @@
         "^build"
       ]
     },
+    "test:cov": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
     "lint": {},
     "dev": {
       "cache": false,
